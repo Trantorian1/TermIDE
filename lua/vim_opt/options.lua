@@ -29,13 +29,14 @@ local options = {
 
 	-- delay options
 	updatetime = 300,	-- makes autocomplete more responsive
-	timeoutlen = 500,	-- max duration waited for a keymap to complete	
+	timeoutlen = 300,	-- max duration waited for a keymap to complete	
 
 	-- display options
 	termguicolors = true,
 
 	-- status line options
 	laststatus = 0,
+
 }
 
 local M = {}

@@ -142,13 +142,139 @@ plugins.ui.legendary.setup {
             mode = NORMAL,
             opts = mapping_opts
         },
+		-- git file search
+		{
+        	[[<S-f>g]],
+            function()
+				require("telescope.builtin").git_files(pickers.sleek)
+            end,
+            mode = NORMAL,
+            opts = mapping_opts
+        },
 		-- command search
 		{
-			'<A-l>',
+			[[<S-f>c]],
 			':Legendary<CR>',
 			description = '[FIND] Opens Legendary command explorer',
 			mode = { NORMAL },
 			opts = mapping_opts
 		},
+
+		-- ====================================================================
+		-- 								    UI
+		-- ====================================================================
+		-- file tree
+		{
+			[[<A-1>]],
+			function()
+				vim.cmd("NvimTreeToggle")
+			end,
+			description = '[UI] Toggle file tree',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- terminal
+		{
+			[[<A-2>]],
+			function()
+				require("core.ui").open_term()
+			end,
+			description = '[UI] Toggles a terminal instante',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- lazygit
+		{
+			[[<A-3>]],
+			function()
+				vim.cmd("LazyGit")
+			end,
+			description = '[UI] Toggles a lazygit instance',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+
+		-- ====================================================================
+		-- 								   LSP
+		-- ====================================================================
+		-- lsp definition
+		{
+			[[<S-l>d]],
+			function() vim.lsp.buf.definition() end,
+			description = '[LSP] Go to keyword definition',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- lsp implementation
+		{
+			[[<S-l>i]],
+			function() vim.lsp.buf.implementation() end,
+			description = "[LSP] List keyword implementations",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- lsp rename
+		{
+			[[<S-l>r]],
+			function() vim.lsp.buf.rename() end,
+			description = "[LSP] Rename keyword",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- lsp code action
+		{
+			[[<S-l>a]],
+			function() vim.lsp.buf.code_action() end,
+			description = "[LSP] Display code action",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- lsp hover
+		{
+			[[<S-l>h]],
+			function() vim.lsp.buf.hover() end,
+			description = "[LSP] Display hover information",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+
+		-- ====================================================================
+		-- 									EDITING
+		-- ====================================================================	
+		-- indent right
+		{
+			'>',
+			'>gv',
+			description = '[EDIT] Indent selection right',
+			mode = { VISUAL },
+			opts = mapping_opts
+		},
+		-- indent left
+		{
+			'<',
+			'<gv',
+			description = '[EDIT] Indent selection left',
+			mode = { VISUAL },
+			opts = mapping_opts
+		},
+		-- commenting
+		{
+			[[<S-c>]],
+			{
+				v = function()
+					local esc = vim.api.nvim_replace_termcodes(
+						'<ESC>', true, false, true
+					)
+
+					vim.api.nvim_feedkeys(esc, 'nx', false)
+					plugins.edit.comment.api.toggle.linewise(vim.fn.visualmode())
+				end,
+				n = function()
+					plugins.edit.comment.api.toggle.linewise.current()
+				end,
+			},
+			description = '[EDIT] Toggle comment',
+			opts = mapping_opts
+		}
     }
 }

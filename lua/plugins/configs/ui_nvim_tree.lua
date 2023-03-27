@@ -1,17 +1,19 @@
 -- dependencies
 local plugins = require "core.plugins"
 
-if not plugins.ui.nvim_tree.loaded then
+if not plugins.ui.nvim_tree.core.loaded then
 	return
 end
 
-plugins.ui.nvim_tree.setup {
+plugins.ui.nvim_tree.core.setup {
 
 	disable_netrw = true,
 	hijack_cursor = true,
 	sort_by = "case_sensitive",
 
 	view = {
+		width = 30,
+		side = "left",
 		relativenumber = true,
 	},
 

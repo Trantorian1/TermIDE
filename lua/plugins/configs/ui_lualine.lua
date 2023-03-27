@@ -5,6 +5,14 @@ if not plugins.ui.lualine.loaded then
     return
 end
 
+
+local navic = function()
+	-- if navic.loaded and navic.is_available() then
+	if plugins.ui.navic["loaded"]then
+		return plugins.ui.navic.get_location()
+	end
+end
+
 plugins.ui.lualine.setup {
     options = {
         icons_enabled = true,
@@ -17,7 +25,7 @@ plugins.ui.lualine.setup {
         },
         ignore_focus = {},
         always_divide_middle = false,
-        globalstatus = false,
+        globalstatus = true,
         refresh = {
           statusline = 1000,
           tabline = 1000,
@@ -41,7 +49,14 @@ plugins.ui.lualine.setup {
         lualine_z = {}
     },
     tabline = {},
-    winbar = {},
+    winbar = {
+		lualine_a = {
+			{
+				navic,
+				separator = { left = '', right = ''}
+			}
+		}
+	},
     inactive_winbar = {},
     extensions = {'nvim-tree', 'toggleterm'}
 }

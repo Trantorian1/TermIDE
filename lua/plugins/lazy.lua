@@ -1,27 +1,66 @@
 local M = {}
 
 local plugins = {
+
 	-- DEPENDENCIES
 	'stevearc/dressing.nvim',
 	'nvim-tree/nvim-web-devicons',
 	'MunifTanjim/nui.nvim',
 	'nvim-lua/plenary.nvim',
 	-- COLOSCHEMES
-	'projekt0n/github-nvim-theme',
-	'sam4llis/nvim-tundra',
+	'sainnhe/edge',
 	-- UI
-	'folke/noice.nvim',
 	'nvim-tree/nvim-tree.lua',
 	'nvim-lualine/lualine.nvim',
-	'akinsho/toggleterm.nvim',
-	'lukas-reineke/virt-column.nvim',
-	'luukvbaal/statuscol.nvim',
 	'nvim-treesitter/nvim-treesitter',
 	'nvim-telescope/telescope.nvim',
 	'mrjones2014/legendary.nvim',
 	'lukas-reineke/indent-blankline.nvim',
+	'p00f/nvim-ts-rainbow',
+	'yamatsum/nvim-cursorline',
+	'shortcuts/no-neck-pain.nvim',
+	'lukas-reineke/virt-column.nvim',
+	{
+		'SmiteshP/nvim-navic',
+		dependencies = 'neovim/nvim-lspconfig'
+	},
+	{
+		'SmiteshP/nvim-navbuddy',
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"SmiteshP/nvim-navic",
+			"MunifTanjim/nui.nvim"
+		}
+	},
 	-- EDIT
-	'mrjones2014/smart-splits.nvim'
+	'mrjones2014/smart-splits.nvim',
+	'windwp/nvim-autopairs',
+	'numToStr/Comment.nvim',
+	'mg979/vim-visual-multi',
+	-- LINTING
+	'jose-elias-alvarez/null-ls.nvim',
+	-- LSP
+	'rafamadriz/friendly-snippets',
+	{
+		'hrsh7th/nvim-cmp',
+		'saadparwaiz1/cmp_luasnip',
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-nvim-lsp-signature-help"
+	},
+	{
+		"L3MON4D3/LuaSnip",
+		run = "make install_jsregexp"
+	},
+	'onsails/lspkind.nvim',
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
+	'neovim/nvim-lspconfig',
+	-- GIT
+	'lewis6991/gitsigns.nvim',
+	'kdheepak/lazygit.nvim',
 }
 
 local opts = {

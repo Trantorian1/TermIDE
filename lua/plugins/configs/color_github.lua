@@ -11,5 +11,5 @@ plugins.color.github.setup {
   	keyword_style = "italic",
   	function_style = "italic",
   	variable_style = "italic",
-	theme_style = "dimmed",
+	theme_style = "dark",
 }
