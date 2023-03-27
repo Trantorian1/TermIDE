@@ -154,7 +154,9 @@ plugins.ui.legendary.setup {
 		-- command search
 		{
 			[[<S-f>c]],
-			':Legendary<CR>',
+			function ()
+				vim.cmd [[Legendary]]
+			end,
 			description = '[FIND] Opens Legendary command explorer',
 			mode = { NORMAL },
 			opts = mapping_opts
@@ -237,6 +239,14 @@ plugins.ui.legendary.setup {
 			modes = { NORMAL },
 			opts = mapping_opts
 		},
+		-- lsp diagnostics
+		{
+			[[<S-l>e]],
+			function() vim.diagnostic.open_float() end,
+			description = "[LSP] Display hover diagnostics",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
 
 		-- ====================================================================
 		-- 									EDITING
@@ -275,6 +285,6 @@ plugins.ui.legendary.setup {
 			},
 			description = '[EDIT] Toggle comment',
 			opts = mapping_opts
-		}
+		},
     }
 }

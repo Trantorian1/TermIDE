@@ -37,6 +37,7 @@ local plugins = {
 	'windwp/nvim-autopairs',
 	'numToStr/Comment.nvim',
 	'mg979/vim-visual-multi',
+	'42Paris/42header',
 	-- LINTING
 	'jose-elias-alvarez/null-ls.nvim',
 	-- LSP
