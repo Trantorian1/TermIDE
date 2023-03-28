@@ -45,6 +45,7 @@ M.edit = {
 	autopairs = require_plugin("nvim-autopairs"),
 	neogen = require_plugin("neogen");
 	twilight = require_plugin("twilight"),
+	autosave = require_plugin("auto-save"),
 	comment = {
 		core = require_plugin("Comment"),
 		api = require_plugin("Comment.api"),

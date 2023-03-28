@@ -169,7 +169,7 @@ plugins.ui.legendary.setup {
 		{
 			[[<A-1>]],
 			function()
-				vim.cmd("NvimTreeToggle")
+				vim.cmd("NvimTreeFocus")
 			end,
 			description = '[UI] Toggle file tree',
 			modes = { NORMAL },
