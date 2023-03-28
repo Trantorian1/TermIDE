@@ -37,6 +37,7 @@ local plugins = {
 	'windwp/nvim-autopairs',
 	'numToStr/Comment.nvim',
 	'mg979/vim-visual-multi',
+	'danymat/neogen',
 	'42Paris/42header',
 	-- LINTING
 	'jose-elias-alvarez/null-ls.nvim',
@@ -59,6 +60,13 @@ local plugins = {
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
 	'neovim/nvim-lspconfig',
+	{
+		'antosha417/nvim-lsp-file-operations',
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			'nvim-tree/nvim-tree.lua'
+		}
+	},
 	-- GIT
 	'lewis6991/gitsigns.nvim',
 	'kdheepak/lazygit.nvim',

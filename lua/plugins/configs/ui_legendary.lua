@@ -195,6 +195,16 @@ plugins.ui.legendary.setup {
 			modes = { NORMAL },
 			opts = mapping_opts
 		},
+		-- navbuddy
+		{
+			[[<A-0>]],
+			function()
+				vim.cmd("Navbuddy")
+			end,
+			description = '[UI] Toggles navigation ui',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
 
 		-- ====================================================================
 		-- 								   LSP
@@ -286,5 +296,15 @@ plugins.ui.legendary.setup {
 			description = '[EDIT] Toggle comment',
 			opts = mapping_opts
 		},
+		-- documenting
+		{
+			[[<S-d>]],
+			function()
+				vim.cmd [[Neogen]]
+			end,
+			description = "[EDIT] Doccument selection",
+			modes = { NORMAL },
+			opts = mapping_opts
+		}
     }
 }

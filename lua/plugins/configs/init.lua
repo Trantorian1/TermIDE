@@ -22,6 +22,7 @@ M.setup = function()
 	require "plugins.configs.edit_autopairs"
 	require "plugins.configs.edit_comment"
 	require "plugins.configs.edit_visual_multi"
+	require "plugins.configs.edit_neogen"
 
 	-- git plugins
 	require "plugins.configs.git_gitsigns"

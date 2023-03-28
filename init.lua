@@ -22,6 +22,8 @@ hl     .setup()
 lsp    .setup()
 linting.setup()
 
+require("lsp-file-operations").setup()
+
 require('dressing').setup({
 	 select = {
 		telescope = require"core.pickers".sleek,
