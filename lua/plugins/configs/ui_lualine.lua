@@ -50,12 +50,12 @@ plugins.ui.lualine.setup {
     },
     tabline = {},
     winbar = {
-		lualine_a = {
-			{
-				navic,
-				separator = { left = '', right = ''}
-			}
-		}
+		-- lualine_a = {
+		-- 	{
+		-- 		navic,
+		-- 		separator = { left = '', right = ''}
+		-- 	}
+		-- }
 	},
     inactive_winbar = {},
     extensions = {'nvim-tree', 'toggleterm'}

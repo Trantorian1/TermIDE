@@ -305,6 +305,16 @@ plugins.ui.legendary.setup {
 			description = "[EDIT] Doccument selection",
 			modes = { NORMAL },
 			opts = mapping_opts
+		},
+		-- zen mode
+		{
+			[[<S-z>]],
+			function()
+				vim.cmd [[ZenMode]]
+			end,
+			description = "[EDIT] Activate zen mode",
+			modes = { NORMAL },
+			opts = mapping_opts
 		}
     }
 }

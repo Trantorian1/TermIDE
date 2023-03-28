@@ -18,11 +18,20 @@ local plugins = {
 	'lukas-reineke/indent-blankline.nvim',
 	'p00f/nvim-ts-rainbow',
 	'yamatsum/nvim-cursorline',
-	'shortcuts/no-neck-pain.nvim',
+	'folke/zen-mode.nvim',
 	'lukas-reineke/virt-column.nvim',
 	{
 		'SmiteshP/nvim-navic',
 		dependencies = 'neovim/nvim-lspconfig'
+	},
+	{
+		'utilyre/barbecue.nvim',
+		name = "barbecue",
+		dependencies = {
+			'SmiteshP/nvim-navic',
+    		'nvim-tree/nvim-web-devicons'
+		},
+		opts = {}
 	},
 	{
 		'SmiteshP/nvim-navbuddy',

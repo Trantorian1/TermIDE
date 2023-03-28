@@ -44,6 +44,7 @@ M.edit = {
 	smart_splits = require_plugin("smart-splits"),
 	autopairs = require_plugin("nvim-autopairs"),
 	neogen = require_plugin("neogen");
+	twilight = require_plugin("twilight"),
 	comment = {
 		core = require_plugin("Comment"),
 		api = require_plugin("Comment.api"),
