@@ -46,7 +46,5 @@ plugins.edit.smart_splits.setup {
 	ignored_events = {
 		'BufEnter',
 		'WinEnter',
-	},
-	-- enable or disable the tmux Integration
-	tmux_integration = true,
+	}
 }

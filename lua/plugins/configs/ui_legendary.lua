@@ -161,6 +161,16 @@ plugins.ui.legendary.setup {
 			mode = { NORMAL },
 			opts = mapping_opts
 		},
+		-- icon search
+		{
+			[[<S-f>i]],
+			function()
+				vim.cmd [[IconPickerNormal]]
+			end,
+			description = '[FIND] Opens icon picker',
+			mode = { NORMAL },
+			opts = mapping_opts
+		},
 
 		-- ====================================================================
 		-- 								    UI

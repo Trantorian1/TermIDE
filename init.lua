@@ -22,7 +22,9 @@ hl     .setup()
 lsp    .setup()
 linting.setup()
 
-require("lsp-file-operations").setup()
+require("icon-picker").setup({
+  disable_legacy_commands = true
+})
 
 require('dressing').setup({
 	 select = {

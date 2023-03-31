@@ -49,6 +49,7 @@ local plugins = {
 	'mg979/vim-visual-multi',
 	'danymat/neogen',
 	'42Paris/42header',
+	'ziontee113/icon-picker.nvim',
 	-- 'Pocco81/auto-save.nvim',
 	-- LINTING
 	'jose-elias-alvarez/null-ls.nvim',
