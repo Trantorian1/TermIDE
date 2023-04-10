@@ -29,6 +29,7 @@ M.setup = function()
 
 	-- lsp plugins
 	require "plugins.configs.lsp_cmp"
+	require "plugins.configs.lsp_todo_comments"
 end
 
 return M

@@ -161,13 +161,13 @@ plugins.ui.legendary.setup {
 			mode = { NORMAL },
 			opts = mapping_opts
 		},
-		-- icon search
+		-- symbols search
 		{
-			[[<S-f>i]],
+			[[<S-f>s]],
 			function()
 				vim.cmd [[IconPickerNormal]]
 			end,
-			description = '[FIND] Opens icon picker',
+			description = '[FIND] Opens symbols picker',
 			mode = { NORMAL },
 			opts = mapping_opts
 		},

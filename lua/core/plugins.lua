@@ -73,6 +73,7 @@ M.lsp = {
 		lsp = require_plugin("mason-lspconfig"),
 	},
 	lspconfig = require_plugin("lspconfig"),
+	todo_comments = require_plugin("todo-comments")
 }
 
 M.git = {

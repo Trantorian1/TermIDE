@@ -79,6 +79,12 @@ local plugins = {
 			'nvim-tree/nvim-tree.lua'
 		}
 	},
+	{
+		'folke/todo-comments.nvim',
+		dependencies = {
+			'nvim-lua/plenary.nvim'
+		}
+	},
 	-- GIT
 	'lewis6991/gitsigns.nvim',
 	'kdheepak/lazygit.nvim',
